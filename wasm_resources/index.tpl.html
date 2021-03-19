@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        margin: 0;
+      }
+      canvas {
+        background-color: black;
+      }
+    </style>
+    <script type="module">
+      import init, { Renderer } from "/$bin.js";
+      async function run() {
+        await init();
+
+        const renderer = new Renderer();
+        const canvas = document.getElementById("game");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const render = () => {
+          renderer.render();
+          window.requestAnimationFrame(render);
+        };
+        render();
+      }
+
+      run();
+    </script>
+  </head>
+  <body>
+    <canvas id="game" width="400" height="300"></canvas>
+  </body>
+</html>
