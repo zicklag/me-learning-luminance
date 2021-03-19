@@ -549,8 +549,6 @@ dependencies = [
 [[package]]
 name = "luminance"
 version = "0.43.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5fe4219f6b16354a910a2163a52c8c3586c728a9d61816165d59bab076880a23"
 dependencies = [
  "luminance-derive",
 ]
@@ -558,8 +556,6 @@ dependencies = [
 [[package]]
 name = "luminance-derive"
 version = "0.6.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bdd6b8d5743d7d434bda65a0657d699051aba986af7a9eebadff382f399f1c52"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -569,8 +565,6 @@ dependencies = [
 [[package]]
 name = "luminance-front"
 version = "0.3.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cbace1b1fc1d85014a43c388f0c36fe1b15152cd7c25e2a6f085dbb3d11c7dd6"
 dependencies = [
  "luminance",
  "luminance-gl",
@@ -630,8 +624,6 @@ dependencies = [
 [[package]]
 name = "luminance-windowing"
 version = "0.9.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a25a647991bc5c9f35a1aa6d506492457c105f9180e2af84270dc0b8b9929704"
 dependencies = [
  "luminance",
 ]
@@ -660,6 +652,7 @@ dependencies = [
  "glutin",
  "instant",
  "luminance",
+ "luminance-derive",
  "luminance-front",
  "luminance-glutin",
  "luminance-web-sys",

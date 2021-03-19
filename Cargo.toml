@@ -11,13 +11,14 @@ luminance-front = "0.3.1"
 luminance-windowing = "0.9.3"
 luminance = "0.43.2"
 instant = "0.1.9"
+luminance-derive = "0.6.3"
 
 [target.'cfg(not(any(target_arch = "wasm32")))'.dependencies]
 luminance-glutin = "0.11.3"
 glutin = "0.26.0"
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
-web-sys = { version = "0.3", features=["HtmlCanvasElement", "WebGl2RenderingContext", "Window", "console"] }
+web-sys = { version = "0.3" }
 luminance-web-sys = "0.2.2"
 wasm-bindgen = { version = "0.2" }
 console_error_panic_hook = "0.1.6"
@@ -26,3 +27,9 @@ parking_lot = { version = "0.11.1", features = ["wasm-bindgen"]}
 
 [build-dependencies]
 cfg_aliases = "0.1.1"
+
+[patch.crates-io]
+luminance-front = { path = "../../other/luminance-rs/luminance-front" }
+luminance-windowing = { path = "../../other/luminance-rs/luminance-windowing" }
+luminance= { path = "../../other/luminance-rs/luminance" }
+luminance-derive = { path = "../../other/luminance-rs/luminance-derive" }
